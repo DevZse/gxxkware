@@ -1,5 +1,5 @@
 if getgenv().gxxkware then
-	print('script already running');
+	warn('script already running');
 	return
 end
 
