@@ -66,6 +66,7 @@ function NewPlayerDrawing(EnemyPlr)
 			Center = true,
 			Font = Script.Settings.Font or Drawing.Fonts.Plex,
 			Outline = true,
+			Size = 20,
 			Text = EnemyPlr.Name
 		}),
 		Distance = NewDrawing('Text', {
