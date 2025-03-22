@@ -184,7 +184,7 @@ end
 
 table.insert(Script.Connections, Players.PlayerAdded:Connect(NewPlayerDrawing))
 table.insert(Script.Connections, Players.PlayerRemoving:Connect(RemovePlayerDrawing))
-table.insert(Script.Connections, RunService.RenderStepped:Connect(UpdateDrawings))
+table.insert(Script.Connections, RunService.PreRender:Connect(UpdateDrawings))
 
 getgenv().gxxkware = {
 	Disconnect = function()
