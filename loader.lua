@@ -135,7 +135,7 @@ function UpdateDrawings()
 			local EnemyHum = EnemyPlr.Character:FindFirstChildOfClass('Humanoid')
 			local EnemyRoot = EnemyPlr.Character:FindFirstChild('HumanoidRootPart')
 
-			if EnemyHum.Parent and EnemyRoot.Parent and EnemyHum.Health >= 0 then
+			if EnemyHum and EnemyRoot and EnemyHum.Parent and EnemyRoot.Parent and EnemyHum.Health >= 0 then
 				local Distance = math.floor((Cam.CFrame.Position - EnemyRoot.Position).Magnitude + 0.5)
 				local RootPos, InView = Cam:WorldToViewportPoint(EnemyRoot.Position)
 				local DistanceScaling = 12 * 1 / (RootPos.Z * math.tan(math.rad(Cam.FieldOfView / 2)) * 2) * 100
@@ -191,7 +191,7 @@ getgenv().gxxkware = {
 		for _, v in next, Script.Connections do
 			v:Disconnect()
 		end
-		
+
 		cleardrawcache()
 		getgenv().gxxkware = nil
 	end,
